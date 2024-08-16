@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "mstaskimport"
+version = "0.1.0"
+description = ""
+authors = ["Vaclav Koldus <vaclav.koldus@sony.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.14"
+requests = "^2.32.3"
+tornado = "^6.4.1"
+pyinstaller = "^6.10.0"
+
+[tool.poetry.extras]
+flask = ["async"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[project.gui-scripts]
+mstaskimport = "mstaskimport:main"
+
+[tool.poetry.scripts]
+mstaskimport = "mstaskimport.main:main"
